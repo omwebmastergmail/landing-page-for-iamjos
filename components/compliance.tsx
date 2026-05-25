@@ -5,32 +5,32 @@ import { CheckCircle } from 'lucide-react'
 const complianceItems = [
   {
     name: 'Google Scholar',
-    description: 'Automatically indexed and visible to global research community',
+    description: 'Terindeks otomatis dan terlihat oleh komunitas peneliti global',
     icon: '🎓'
   },
   {
     name: 'Scopus',
-    description: 'Citation tracking and indexing for academic impact measurement',
+    description: 'Pelacakan sitasi dan pengindeksan untuk pengukuran dampak akademik',
     icon: '📊'
   },
   {
     name: 'Web of Science',
-    description: 'Enterprise-grade citation and usage analytics',
+    description: 'Analitik sitasi dan penggunaan tingkat enterprise',
     icon: '🌐'
   },
   {
     name: 'Crossref',
-    description: 'Digital Object Identifier registration and management',
+    description: 'Pendaftaran dan manajemen Pengenal Objek Digital',
     icon: '🔗'
   },
   {
-    name: 'COPE Standards',
-    description: 'Committee on Publication Ethics compliance',
+    name: 'Standar COPE',
+    description: 'Kepatuhan Committee on Publication Ethics',
     icon: '✓'
   },
   {
-    name: 'ICMJE Guidelines',
-    description: 'International Committee of Medical Journal Editors standards',
+    name: 'Panduan ICMJE',
+    description: 'Standar International Committee of Medical Journal Editors',
     icon: '📋'
   }
 ]
@@ -44,11 +44,11 @@ export function ComplianceSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
-                Global Compliance & Indexing
+                Kepatuhan & Pengindeksan Global
               </h2>
               <p className="text-lg text-foreground/60">
-                IamJOS meets international standards and integrates with every major academic database.
-                Your research gets the visibility it deserves.
+                IamJOS memenuhi standar internasional dan terintegrasi dengan setiap database akademik utama.
+                Penelitian Anda mendapat visibilitas yang layak.
               </p>
             </div>
 

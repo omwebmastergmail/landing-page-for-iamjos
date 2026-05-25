@@ -7,28 +7,28 @@ export function Footer() {
 
   const footerLinks = {
     product: [
-      { label: 'Features', href: '#features' },
-      { label: 'Pricing', href: '#pricing' },
-      { label: 'Security', href: '#security' },
+      { label: 'Fitur', href: '#features' },
+      { label: 'Harga', href: '#pricing' },
+      { label: 'Keamanan', href: '#security' },
       { label: 'Roadmap', href: '#roadmap' }
     ],
     company: [
-      { label: 'About Us', href: '#about' },
+      { label: 'Tentang Kami', href: '#about' },
       { label: 'Blog', href: '#blog' },
-      { label: 'Careers', href: '#careers' },
-      { label: 'Contact', href: '#contact' }
+      { label: 'Karir', href: '#careers' },
+      { label: 'Hubungi', href: '#contact' }
     ],
     resources: [
-      { label: 'Documentation', href: '#docs' },
-      { label: 'API Reference', href: '#api' },
-      { label: 'Help Center', href: '#help' },
-      { label: 'Community', href: '#community' }
+      { label: 'Dokumentasi', href: '#docs' },
+      { label: 'Referensi API', href: '#api' },
+      { label: 'Pusat Bantuan', href: '#help' },
+      { label: 'Komunitas', href: '#community' }
     ],
     legal: [
-      { label: 'Privacy Policy', href: '#privacy' },
-      { label: 'Terms of Service', href: '#terms' },
-      { label: 'Cookie Policy', href: '#cookies' },
-      { label: 'Compliance', href: '#compliance' }
+      { label: 'Kebijakan Privasi', href: '#privacy' },
+      { label: 'Syarat Layanan', href: '#terms' },
+      { label: 'Kebijakan Cookie', href: '#cookies' },
+      { label: 'Kepatuhan', href: '#compliance' }
     ]
   }
 
@@ -42,7 +42,11 @@ export function Footer() {
             <div className="space-y-2">
               <h3 className="text-2xl font-serif font-bold">IamJOS</h3>
               <p className="text-sm text-white/70">
-                Premium journal management for the modern academic world.
+                Manajemen jurnal premium untuk dunia akademik modern.
+              </p>
+              <p className="text-xs text-white/60 font-medium">
+                Didukung oleh APJI<br/>
+                (Asosiasi Pengelola Jurnal Indonesia)
               </p>
             </div>
             <div className="flex gap-4">
@@ -63,7 +67,7 @@ export function Footer() {
 
           {/* Product */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Product</h4>
+            <h4 className="font-semibold">Produk</h4>
             <ul className="space-y-2">
               {footerLinks.product.map((link, index) => (
                 <li key={index}>
@@ -80,7 +84,7 @@ export function Footer() {
 
           {/* Company */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Company</h4>
+            <h4 className="font-semibold">Perusahaan</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
@@ -97,7 +101,7 @@ export function Footer() {
 
           {/* Resources */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Resources</h4>
+            <h4 className="font-semibold">Sumber Daya</h4>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -114,7 +118,7 @@ export function Footer() {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h4 className="font-semibold">Legal</h4>
+            <h4 className="font-semibold">Hukum</h4>
             <ul className="space-y-2">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
@@ -136,17 +140,17 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
           <p>
-            © {currentYear} IamJOS. All rights reserved. | Integrated Management of Journal System
+            © {currentYear} IamJOS. Semua hak dilindungi. | Integrated Management of Journal System
           </p>
           <div className="flex gap-6">
             <a href="#privacy" className="hover:text-accent transition-colors">
-              Privacy
+              Privasi
             </a>
             <a href="#terms" className="hover:text-accent transition-colors">
-              Terms
+              Syarat
             </a>
             <a href="#cookies" className="hover:text-accent transition-colors">
-              Cookies
+              Cookie
             </a>
           </div>
         </div>
@@ -154,13 +158,13 @@ export function Footer() {
         {/* Compliance Badges */}
         <div className="mt-8 pt-8 border-t border-white/10">
           <p className="text-xs text-white/50 text-center mb-4">
-            Enterprise-Grade Compliance
+            Kepatuhan Tingkat Enterprise
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-xs text-white/60">
-            <span>✓ GDPR Compliant</span>
+            <span>✓ GDPR Patuh</span>
             <span>✓ ISO 27001</span>
-            <span>✓ SOC 2 Certified</span>
-            <span>✓ CCPA Ready</span>
+            <span>✓ SOC 2 Tersertifikasi</span>
+            <span>✓ CCPA Siap</span>
           </div>
         </div>
       </div>

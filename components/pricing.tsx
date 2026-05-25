@@ -7,53 +7,53 @@ const plans = [
   {
     name: 'Starter',
     price: '$99',
-    period: '/month',
-    description: 'Perfect for small academic journals',
+    period: '/bulan',
+    description: 'Sempurna untuk jurnal akademik kecil',
     features: [
-      'Up to 5 issues/year',
-      'Unlimited articles',
-      'Google Scholar indexing',
-      'Basic analytics',
-      'Email support',
-      'Community forum access'
+      'Hingga 5 edisi/tahun',
+      'Artikel tidak terbatas',
+      'Pengindeksan Google Scholar',
+      'Analitik dasar',
+      'Dukungan email',
+      'Akses forum komunitas'
     ],
-    cta: 'Start Free Trial',
+    cta: 'Coba Gratis',
     highlighted: false
   },
   {
     name: 'Professional',
     price: '$299',
-    period: '/month',
-    description: 'For established journals with growth',
+    period: '/bulan',
+    description: 'Untuk jurnal mapan dengan pertumbuhan',
     features: [
-      'Unlimited issues',
-      'Unlimited articles',
+      'Edisi tidak terbatas',
+      'Artikel tidak terbatas',
       'Google Scholar + Scopus',
-      'DOI assignment via Crossref',
-      'Advanced analytics',
-      'Priority email support',
-      'API access',
-      'Custom domain'
+      'Penugasan DOI via Crossref',
+      'Analitik lanjutan',
+      'Dukungan email prioritas',
+      'Akses API',
+      'Domain kustom'
     ],
-    cta: 'Start Free Trial',
+    cta: 'Coba Gratis',
     highlighted: true
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
-    period: 'pricing',
-    description: 'For large-scale operations',
+    price: 'Kustom',
+    period: 'harga',
+    description: 'Untuk operasi skala besar',
     features: [
-      'Everything in Professional',
-      'Dedicated account manager',
-      'Custom integrations',
-      'Advanced security',
-      '24/7 phone support',
-      'SLA guarantees',
-      'White-label solution',
-      'Data migration support'
+      'Semua fitur Professional',
+      'Manajer akun khusus',
+      'Integrasi kustom',
+      'Keamanan lanjutan',
+      'Dukungan telepon 24/7',
+      'Jaminan SLA',
+      'Solusi white-label',
+      'Dukungan migrasi data'
     ],
-    cta: 'Contact Sales',
+    cta: 'Hubungi Penjualan',
     highlighted: false
   }
 ]
@@ -65,10 +65,10 @@ export function PricingSection() {
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
-            Simple, Transparent Pricing
+            Harga Sederhana dan Transparan
           </h2>
           <p className="text-lg text-foreground/60">
-            Choose the plan that fits your journal&apos;s needs
+            Pilih paket yang sesuai dengan kebutuhan jurnal Anda
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export function PricingSection() {
             >
               {plan.highlighted && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-primary px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
+                  Paling Populer
                 </div>
               )}
 
@@ -140,10 +140,10 @@ export function PricingSection() {
         {/* Bottom CTA */}
         <div className="mt-16 text-center space-y-4">
           <p className="text-foreground/60 text-lg">
-            All plans include 14-day free trial. No credit card required.
+            Semua paket termasuk uji coba gratis 14 hari. Tidak perlu kartu kredit.
           </p>
           <p className="text-sm text-foreground/50">
-            Need a custom solution? <a href="#contact" className="text-accent font-semibold hover:underline">Contact our sales team</a>
+            Butuh solusi khusus? <a href="#contact" className="text-accent font-semibold hover:underline">Hubungi tim penjualan kami</a>
           </p>
         </div>
       </div>

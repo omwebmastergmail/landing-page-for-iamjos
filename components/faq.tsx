@@ -7,53 +7,53 @@ import { cn } from '@/lib/utils'
 const faqs = [
   {
     id: 1,
-    question: 'How does IamJOS compare to Open Journal Systems (OJS)?',
-    answer: 'IamJOS is a cloud-native, modern alternative to OJS that offers Google Scholar and Scopus indexing out of the box, real-time collaboration, automated backups, and advanced analytics. While OJS requires self-hosting and extensive configuration, IamJOS is fully managed and ready to use immediately.'
+    question: 'Bagaimana IamJOS dibandingkan dengan Open Journal Systems (OJS)?',
+    answer: 'IamJOS adalah alternatif modern berbasis cloud untuk OJS yang menawarkan pengindeksan Google Scholar dan Scopus langsung dari paket, kolaborasi real-time, backup otomatis, dan analitik lanjutan. Sementara OJS memerlukan self-hosting dan konfigurasi ekstensif, IamJOS sepenuhnya dikelola dan siap digunakan segera.'
   },
   {
     id: 2,
-    question: 'Is IamJOS compatible with Google Scholar indexing?',
-    answer: 'Yes, IamJOS is fully optimized for Google Scholar indexing with automatic metadata compliance, proper XML formatting, and schema markup. Your journal will be discoverable by Google Scholar within days of publication.'
+    question: 'Apakah IamJOS kompatibel dengan pengindeksan Google Scholar?',
+    answer: 'Ya, IamJOS sepenuhnya dioptimalkan untuk pengindeksan Google Scholar dengan kepatuhan metadata otomatis, format XML yang tepat, dan penanda skema. Jurnal Anda akan dapat ditemukan oleh Google Scholar dalam hitungan hari setelah publikasi.'
   },
   {
     id: 3,
-    question: 'Can IamJOS handle Scopus and citation tracking?',
-    answer: 'Absolutely. IamJOS integrates directly with Scopus and provides real-time citation tracking and analytics. You can monitor citation impact, track article performance, and access detailed metrics through our dashboard.'
+    question: 'Dapatkah IamJOS menangani Scopus dan pelacakan sitasi?',
+    answer: 'Tentu saja. IamJOS terintegrasi langsung dengan Scopus dan menyediakan pelacakan sitasi dan analitik real-time. Anda dapat memantau dampak sitasi, melacak kinerja artikel, dan mengakses metrik terperinci melalui dasbor kami.'
   },
   {
     id: 4,
-    question: 'How does DOI management work in IamJOS?',
-    answer: 'IamJOS provides automatic DOI assignment through Crossref. Every article published on IamJOS automatically receives a unique DOI, making your content globally discoverable and citeable. DOI management is included in all plans.'
+    question: 'Bagaimana manajemen DOI bekerja di IamJOS?',
+    answer: 'IamJOS menyediakan penugasan DOI otomatis melalui Crossref. Setiap artikel yang diterbitkan di IamJOS secara otomatis menerima DOI unik, membuat konten Anda dapat ditemukan dan dikutip secara global. Manajemen DOI disertakan dalam semua paket.'
   },
   {
     id: 5,
-    question: 'What about data migration from OJS?',
-    answer: 'IamJOS supports seamless migration from Open Journal Systems. Our migration team will handle the transfer of all your journal data, articles, issues, and user accounts with zero downtime and full data integrity.'
+    question: 'Bagaimana dengan migrasi data dari OJS?',
+    answer: 'IamJOS mendukung migrasi mulus dari Open Journal Systems. Tim migrasi kami akan menangani transfer semua data jurnal, artikel, edisi, dan akun pengguna Anda dengan downtime nol dan integritas data penuh.'
   },
   {
     id: 6,
-    question: 'Is IamJOS secure and compliant?',
-    answer: 'Yes. IamJOS meets GDPR, CCPA, and international academic standards. We use bank-grade encryption, automatic backups, DDoS protection, and regular security audits. All data is stored on secure, certified cloud infrastructure.'
+    question: 'Apakah IamJOS aman dan patuh terhadap standar?',
+    answer: 'Ya. IamJOS memenuhi GDPR, CCPA, dan standar akademik internasional. Kami menggunakan enkripsi tingkat bank, backup otomatis, perlindungan DDoS, dan audit keamanan reguler. Semua data disimpan di infrastruktur cloud yang aman dan tersertifikasi.'
   },
   {
     id: 7,
-    question: 'Can I customize the journal interface?',
-    answer: 'Completely. IamJOS offers white-label solutions with customizable themes, logos, colors, and layouts. You can make it look exactly like your brand while maintaining our powerful backend.'
+    question: 'Dapatkah saya menyesuaikan antarmuka jurnal?',
+    answer: 'Tentu saja. IamJOS menawarkan solusi white-label dengan tema, logo, warna, dan tata letak yang dapat disesuaikan. Anda dapat membuatnya terlihat persis seperti merek Anda sambil mempertahankan backend kami yang canggih.'
   },
   {
     id: 8,
-    question: 'What is the pricing model?',
-    answer: 'IamJOS offers flexible pricing based on your journal size and features needed. We provide free trials, startup packages, and enterprise solutions. Contact our sales team for a custom quote based on your needs.'
+    question: 'Bagaimana model penetapan harga?',
+    answer: 'IamJOS menawarkan harga fleksibel berdasarkan ukuran jurnal dan fitur yang Anda butuhkan. Kami menyediakan uji coba gratis, paket startup, dan solusi enterprise. Hubungi tim penjualan kami untuk penawaran khusus berdasarkan kebutuhan Anda.'
   },
   {
     id: 9,
-    question: 'How is customer support provided?',
-    answer: 'We provide 24/7 support via email, live chat, and phone. Dedicated account managers are assigned to enterprise customers. We also offer comprehensive documentation and video tutorials.'
+    question: 'Bagaimana dukungan pelanggan disediakan?',
+    answer: 'Kami menyediakan dukungan 24/7 melalui email, live chat, dan telepon. Manajer akun khusus ditugaskan untuk pelanggan enterprise. Kami juga menawarkan dokumentasi komprehensif dan tutorial video.'
   },
   {
     id: 10,
-    question: 'Can I integrate IamJOS with my existing systems?',
-    answer: 'Yes. IamJOS provides a robust REST API for integrations with your existing systems, LMS platforms, and institutional repositories. Full API documentation is available for all customers.'
+    question: 'Dapatkah saya mengintegrasikan IamJOS dengan sistem yang ada?',
+    answer: 'Ya. IamJOS menyediakan REST API yang kuat untuk integrasi dengan sistem yang ada, platform LMS, dan repositori institusional. Dokumentasi API lengkap tersedia untuk semua pelanggan.'
   }
 ]
 
@@ -66,10 +66,10 @@ export function FAQSection() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
-            Frequently Asked Questions
+            Pertanyaan yang Sering Diajukan
           </h2>
           <p className="text-lg text-foreground/60">
-            Everything you need to know about IamJOS
+            Semua yang perlu Anda ketahui tentang IamJOS
           </p>
         </div>
 
@@ -109,13 +109,13 @@ export function FAQSection() {
         {/* CTA */}
         <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 text-center space-y-4">
           <h3 className="text-2xl font-serif font-bold text-primary">
-            Still have questions?
+            Masih ada pertanyaan?
           </h3>
           <p className="text-foreground/60 mb-6">
-            Our team is ready to help. Get in touch with us for personalized support.
+            Tim kami siap membantu. Hubungi kami untuk dukungan personal.
           </p>
           <button className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-            Contact Support
+            Hubungi Dukungan
           </button>
         </div>
       </div>

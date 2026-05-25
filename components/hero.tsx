@@ -13,24 +13,28 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/30">
-            <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-primary">Advanced Scientific Platform</span>
+          <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 px-4 py-3 rounded-full bg-accent/15 border border-accent/30">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span className="text-sm font-medium text-primary">Platform Ilmiah Terdepan</span>
+            </div>
+            <span className="text-xs text-primary/70 hidden sm:inline">|</span>
+            <span className="text-xs font-medium text-primary">Didukung oleh APJI</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
-              Publish with Precision
+              Publikasikan dengan Presisi
             </span>
             <br />
-            <span className="text-primary">Manage with Excellence</span>
+            <span className="text-primary">Kelola dengan Keunggulan</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-            IamJOS is the premium journal publication management platform built for academic excellence. 
-            Google Scholar indexed, Scopus-compliant, and ready for global citations.
+            IamJOS adalah platform manajemen publikasi jurnal premium yang dibangun untuk keunggulan akademik. 
+            Terindeks Google Scholar, sesuai Scopus, dan siap untuk sitasi global.
           </p>
 
           {/* CTA Buttons */}
@@ -39,7 +43,7 @@ export function HeroSection() {
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-white rounded-lg h-14 px-8 text-base font-semibold"
             >
-              Start Free Trial
+              Coba Gratis Sekarang
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button 
@@ -47,7 +51,7 @@ export function HeroSection() {
               size="lg"
               className="rounded-lg h-14 px-8 text-base font-semibold border-primary/30 text-primary hover:bg-primary/5"
             >
-              Watch Demo
+              Lihat Demo
             </Button>
           </div>
 
@@ -55,19 +59,19 @@ export function HeroSection() {
           <div className="pt-8 flex flex-wrap justify-center gap-6 text-sm text-foreground/60">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span>Google Scholar Indexed</span>
+              <span>Terindeks Google Scholar</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span>Scopus Compliant</span>
+              <span>Sesuai Scopus</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span>DOI Enabled</span>
+              <span>DOI Aktif</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span>Crossref Ready</span>
+              <span>Siap Crossref</span>
             </div>
           </div>
         </div>

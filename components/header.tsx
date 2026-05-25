@@ -8,9 +8,9 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navItems = [
-    { label: 'Features', href: '#features' },
-    { label: 'Compliance', href: '#compliance' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Fitur', href: '#features' },
+    { label: 'Kepatuhan', href: '#compliance' },
+    { label: 'Harga', href: '#pricing' },
     { label: 'FAQ', href: '#faq' },
   ]
 
@@ -43,10 +43,10 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Button variant="outline" className="text-primary border-primary/30">
-            Sign In
+            Masuk
           </Button>
           <Button className="bg-primary hover:bg-primary/90 text-white">
-            Start Free Trial
+            Coba Gratis
           </Button>
         </div>
 
@@ -79,10 +79,10 @@ export function Header() {
             ))}
             <div className="pt-4 border-t border-primary/10 space-y-3">
               <Button variant="outline" className="w-full text-primary border-primary/30">
-                Sign In
+                Masuk
               </Button>
               <Button className="w-full bg-primary hover:bg-primary/90 text-white">
-                Start Free Trial
+                Coba Gratis
               </Button>
             </div>
           </div>

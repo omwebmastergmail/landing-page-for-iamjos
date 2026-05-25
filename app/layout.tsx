@@ -9,14 +9,14 @@ const _plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-p
 const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: 'IamJOS - Integrated Journal Management System',
-  description: 'Premium journal publication platform with Google Scholar, Scopus, Crossref, and DOI compliance. Professional alternative to OJS with advanced indexing capabilities.',
-  keywords: 'journal management, publication platform, Google Scholar, Scopus, Crossref, DOI, OJS alternative',
-  authors: [{ name: 'IamJOS' }],
+  title: 'IamJOS - Sistem Manajemen Jurnal Terintegrasi',
+  description: 'Platform publikasi jurnal premium dengan kepatuhan Google Scholar, Scopus, Crossref, dan DOI. Alternatif profesional OJS dengan kemampuan pengindeksan lanjutan. Didukung oleh APJI (Asosiasi Pengelola Jurnal Indonesia).',
+  keywords: 'manajemen jurnal, platform publikasi, Google Scholar, Scopus, Crossref, DOI, alternatif OJS, APJI',
+  authors: [{ name: 'IamJOS' }, { name: 'APJI' }],
   generator: 'v0.app',
   openGraph: {
-    title: 'IamJOS - Integrated Journal Management System',
-    description: 'Premium journal publication platform with advanced indexing and compliance',
+    title: 'IamJOS - Sistem Manajemen Jurnal Terintegrasi',
+    description: 'Platform publikasi jurnal premium dengan pengindeksan dan kepatuhan lanjutan',
     type: 'website',
   },
   icons: {
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth bg-background" style={{ colorScheme: 'light' }}>
+    <html lang="id" className="scroll-smooth bg-background" style={{ colorScheme: 'light' }}>
       <body className={`${_plusJakarta.variable} ${_playfair.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

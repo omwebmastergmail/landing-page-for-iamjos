@@ -27,17 +27,17 @@ export function NewsletterSection() {
         <div className="rounded-3xl bg-gradient-to-br from-primary to-primary/80 p-12 sm:p-16 text-white text-center space-y-8">
           <div className="space-y-4">
             <h2 className="text-4xl sm:text-5xl font-serif font-bold">
-              Stay Updated
+              Tetap Terdepan
             </h2>
             <p className="text-lg text-white/90 max-w-2xl mx-auto">
-              Get the latest updates on journal publishing trends, new features, and academic insights delivered to your inbox.
+              Dapatkan update terbaru tentang tren penerbitan jurnal, fitur baru, dan wawasan akademik langsung ke kotak masuk Anda.
             </p>
           </div>
 
           {subscribed ? (
             <div className="max-w-md mx-auto p-6 rounded-2xl bg-white/20 border border-white/30 text-center space-y-2">
-              <p className="text-white font-semibold">✓ Thanks for subscribing!</p>
-              <p className="text-white/80 text-sm">Check your email for confirmation.</p>
+              <p className="text-white font-semibold">✓ Terima kasih telah berlangganan!</p>
+              <p className="text-white/80 text-sm">Periksa email Anda untuk konfirmasi.</p>
             </div>
           ) : (
             <form onSubmit={handleSubscribe} className="max-w-md mx-auto">
@@ -46,7 +46,7 @@ export function NewsletterSection() {
                   <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-foreground opacity-50" />
                   <input
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="email@anda.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -58,11 +58,11 @@ export function NewsletterSection() {
                   className="px-6 py-3 bg-white/20 hover:bg-white/30 border border-white/30 text-white rounded-lg font-semibold transition-colors flex items-center gap-2"
                 >
                   <Send className="w-4 h-4" />
-                  <span className="hidden sm:inline">Subscribe</span>
+                  <span className="hidden sm:inline">Berlangganan</span>
                 </button>
               </div>
               <p className="text-xs text-white/70 mt-3">
-                We&apos;ll never share your email. Unsubscribe anytime.
+                Kami tidak akan pernah membagikan email Anda. Berhenti berlangganan kapan saja.
               </p>
             </form>
           )}

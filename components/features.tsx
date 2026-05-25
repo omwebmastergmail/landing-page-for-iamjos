@@ -1,47 +1,47 @@
 'use client'
 
-import { BookOpen, Search, Shield, Zap, Users, BarChart3, Globe, Lock } from 'lucide-react'
+import { BookOpen, Search, Shield, Zap, Users, BarChart3, Globe, Lock, Sparkles } from 'lucide-react'
 
 const features = [
   {
     icon: BookOpen,
-    title: 'Multi-Language Support',
-    description: 'Publish and manage journals in multiple languages with full internationalization support.'
+    title: 'Dukungan Multi-Bahasa',
+    description: 'Publikasikan dan kelola jurnal dalam berbagai bahasa dengan dukungan internasionalisasi penuh.'
   },
   {
     icon: Search,
-    title: 'Advanced Indexing',
-    description: 'Automatic Google Scholar, Scopus, and Web of Science integration for maximum visibility.'
+    title: 'Pengindeksan Lanjutan',
+    description: 'Integrasi otomatis Google Scholar, Scopus, dan Web of Science untuk visibilitas maksimal.'
   },
   {
     icon: BarChart3,
-    title: 'Citation Analytics',
-    description: 'Real-time citation tracking and analytics with detailed impact metrics.'
+    title: 'Analitik Sitasi',
+    description: 'Pelacakan sitasi real-time dan analitik dengan metrik dampak terperinci.'
   },
   {
     icon: Globe,
-    title: 'Global DOI System',
-    description: 'Integrated DOI assignment through Crossref for worldwide discoverability.'
+    title: 'Sistem DOI Global',
+    description: 'Penugasan DOI terintegrasi melalui Crossref untuk penemuan di tingkat dunia.'
   },
   {
     icon: Users,
-    title: 'Peer Review System',
-    description: 'Sophisticated workflow management for editors, reviewers, and authors.'
+    title: 'Sistem Peer Review',
+    description: 'Manajemen alur kerja canggih untuk editor, reviewer, dan penulis.'
   },
   {
     icon: Shield,
-    title: 'Academic Compliance',
-    description: 'Full COPE, ICMJE, and international academic standards compliance.'
+    title: 'Kepatuhan Akademik',
+    description: 'Kepatuhan COPE, ICMJE, dan standar akademik internasional penuh.'
   },
   {
     icon: Zap,
-    title: 'Lightning Fast',
-    description: 'Optimized performance with global CDN distribution for instant access.'
+    title: 'Ultra Cepat',
+    description: 'Performa optimal dengan distribusi CDN global untuk akses instan.'
   },
   {
     icon: Lock,
-    title: 'Enterprise Security',
-    description: 'Bank-grade encryption and comprehensive data protection protocols.'
+    title: 'Keamanan Enterprise',
+    description: 'Enkripsi tingkat bank dan protokol perlindungan data komprehensif.'
   }
 ]
 
@@ -49,18 +49,21 @@ export function FeaturesSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-primary/5">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
-            Powerful Features Built for Excellence
-          </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            Everything you need to manage a world-class academic journal
-          </p>
-        </div>
-
-        {/* Features Grid */}
+        {/* Features Grid with Title Card in First Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Title Card - Same row as features */}
+          <div className="md:col-span-1 lg:col-span-1 flex flex-col justify-center">
+            <div className="space-y-4">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary leading-tight">
+                Fitur Unggulan untuk Keunggulan
+              </h2>
+              <p className="text-sm text-foreground/60">
+                Semua yang Anda butuhkan untuk mengelola jurnal akademik berkelas dunia
+              </p>
+            </div>
+          </div>
+
+          {/* Feature Cards */}
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (

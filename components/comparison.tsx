@@ -3,16 +3,16 @@
 import { CheckCircle2, X } from 'lucide-react'
 
 const comparisonData = [
-  { feature: 'Google Scholar Indexing', iamjos: true, ojs: false },
-  { feature: 'Scopus Integration', iamjos: true, ojs: false },
-  { feature: 'DOI Management', iamjos: true, ojs: true },
-  { feature: 'Citation Analytics', iamjos: true, ojs: false },
-  { feature: 'Cloud-Based', iamjos: true, ojs: false },
-  { feature: 'Automatic Backups', iamjos: true, ojs: false },
-  { feature: 'Multi-Language UI', iamjos: true, ojs: true },
-  { feature: 'Real-time Collaboration', iamjos: true, ojs: false },
-  { feature: 'Advanced Security', iamjos: true, ojs: false },
-  { feature: 'API Access', iamjos: true, ojs: true },
+  { feature: 'Pengindeksan Google Scholar', iamjos: true, ojs: false },
+  { feature: 'Integrasi Scopus', iamjos: true, ojs: false },
+  { feature: 'Manajemen DOI', iamjos: true, ojs: true },
+  { feature: 'Analitik Sitasi', iamjos: true, ojs: false },
+  { feature: 'Berbasis Cloud', iamjos: true, ojs: false },
+  { feature: 'Backup Otomatis', iamjos: true, ojs: false },
+  { feature: 'UI Multi-Bahasa', iamjos: true, ojs: true },
+  { feature: 'Kolaborasi Real-time', iamjos: true, ojs: false },
+  { feature: 'Keamanan Lanjutan', iamjos: true, ojs: false },
+  { feature: 'Akses API', iamjos: true, ojs: true },
 ]
 
 export function ComparisonSection() {
@@ -22,10 +22,10 @@ export function ComparisonSection() {
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
-            Why Choose IamJOS?
+            Mengapa Memilih IamJOS?
           </h2>
           <p className="text-lg text-foreground/60">
-            The modern alternative to traditional journal management systems
+            Alternatif modern untuk sistem manajemen jurnal tradisional
           </p>
         </div>
 
@@ -37,13 +37,13 @@ export function ComparisonSection() {
               <thead>
                 <tr className="border-b border-primary/20 bg-gradient-to-r from-primary/5 to-accent/5">
                   <th className="px-6 py-4 text-left">
-                    <span className="font-semibold text-foreground">Features</span>
+                    <span className="font-semibold text-foreground">Fitur</span>
                   </th>
                   <th className="px-6 py-4 text-center">
                     <span className="font-semibold text-primary">IamJOS</span>
                   </th>
                   <th className="px-6 py-4 text-center">
-                    <span className="font-semibold text-foreground/60">Traditional OJS</span>
+                    <span className="font-semibold text-foreground/60">OJS Tradisional</span>
                   </th>
                 </tr>
               </thead>
@@ -84,10 +84,10 @@ export function ComparisonSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="text-lg text-foreground/60 mb-4">
-            Ready to upgrade your journal management system?
+            Siap untuk meningkatkan sistem manajemen jurnal Anda?
           </p>
           <button className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-            Start Your Free Trial
+            Mulai Uji Coba Gratis Anda
           </button>
         </div>
       </div>
