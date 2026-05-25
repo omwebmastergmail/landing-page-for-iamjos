@@ -1,6 +1,7 @@
 'use client'
 
 import { CheckCircle } from 'lucide-react'
+import Image from 'next/image'
 
 const complianceItems = [
   {
@@ -72,22 +73,18 @@ export function ComplianceSection() {
             </div>
           </div>
 
-          {/* Right Visual */}
+          {/* Right Visual - Compliance Dashboard Mock */}
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl" />
-            <div className="relative z-10 aspect-square rounded-3xl border border-primary/20 flex items-center justify-center overflow-hidden">
-              <div className="grid grid-cols-3 gap-4 p-8">
-                {[...Array(9)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="aspect-square rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 flex items-center justify-center group cursor-pointer hover:scale-105 transition-transform"
-                  >
-                    <div className="text-2xl opacity-60 group-hover:opacity-100 transition-opacity">
-                      {['🎓', '📊', '🌐', '🔗', '✓', '📋', '🚀', '🔒', '💼'][i]}
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="relative z-10 rounded-3xl border border-primary/20 overflow-hidden">
+              <Image
+                src="/compliance-dashboard-mock.jpg"
+                alt="IamJOS Compliance & Indexing Dashboard"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
