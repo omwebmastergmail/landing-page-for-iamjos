@@ -51,13 +51,17 @@ export function FeaturesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Features Grid with Title Card in First Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Title Card - Same row as features */}
-          <div className="md:col-span-1 lg:col-span-1 flex flex-col justify-center">
-            <div className="space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-primary leading-tight">
+          {/* Title Card - Styled as featured card */}
+          <div className="group relative bg-white/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 hover:shadow-lg md:col-span-1 lg:col-span-1 flex flex-col justify-center h-full">
+            {/* Accent line */}
+            <div className="absolute top-0 left-0 w-1 h-12 bg-gradient-to-b from-accent to-transparent rounded-full group-hover:h-16 transition-all duration-300" />
+
+            {/* Title Content */}
+            <div className="space-y-3">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary leading-tight">
                 Fitur Unggulan untuk Keunggulan
               </h2>
-              <p className="text-sm text-foreground/60">
+              <p className="text-sm text-foreground/60 leading-relaxed">
                 Semua yang Anda butuhkan untuk mengelola jurnal akademik berkelas dunia
               </p>
             </div>
