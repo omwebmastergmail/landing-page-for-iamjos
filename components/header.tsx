@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
+  const [hasScrolled, setHasScrolled] = useState(false)
 
   const navItems = [
     { label: 'Fitur', href: '#features' },
@@ -14,8 +16,38 @@ export function Header() {
     { label: 'FAQ', href: '#faq' },
   ]
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Detect scroll position for header styling
+      setHasScrolled(window.scrollY > 10)
+
+      // Detect active section
+      const sections = ['features', 'compliance', 'pricing', 'faq']
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          return rect.top <= 100 && rect.bottom >= 100
+        }
+        return false
+      })
+      if (currentSection) {
+        setActiveSection(currentSection)
+      } else {
+        setActiveSection('home')
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary/10">
+    <header className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${
+      hasScrolled
+        ? 'bg-white/95 border-b border-primary/20 shadow-sm'
+        : 'bg-white/80 border-b border-primary/10'
+    }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
@@ -29,15 +61,25 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive = activeSection === item.href.slice(1)
+            return (
+              <a
+                key={index}
+                href={item.href}
+                className={`text-sm font-medium transition-colors relative group ${
+                  isActive
+                    ? 'text-primary'
+                    : 'text-foreground/70 hover:text-primary'
+                }`}
+              >
+                {item.label}
+                {isActive && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent" />
+                )}
+              </a>
+            )
+          })}
         </div>
 
         {/* Desktop CTA */}
@@ -67,16 +109,23 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-primary/10 bg-white">
           <div className="px-4 py-4 space-y-4">
-            {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                className="block text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item, index) => {
+              const isActive = activeSection === item.href.slice(1)
+              return (
+                <a
+                  key={index}
+                  href={item.href}
+                  className={`block text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'text-primary font-semibold'
+                      : 'text-foreground/70 hover:text-primary'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
+            })}
             <div className="pt-4 border-t border-primary/10 space-y-3">
               <Button variant="outline" className="w-full text-primary border-primary/30">
                 Masuk
