@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 const plans = [
   {
     name: 'Starter',
-    price: '$99',
+    price: 'Rp 1.584.000',
     period: '/bulan',
     description: 'Sempurna untuk jurnal akademik kecil',
     features: [
@@ -22,7 +22,7 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '$299',
+    price: 'Rp 4.784.000',
     period: '/bulan',
     description: 'Untuk jurnal mapan dengan pertumbuhan',
     features: [
