@@ -1,5 +1,6 @@
-import { ArrowLeft, Calendar } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
@@ -9,36 +10,44 @@ const getAllNews = () => [
     title: 'IamJOS Resmi Didukung APJI, Platform Jurnal Terdepan di Indonesia',
     date: '25 Mei 2026',
     author: 'Tim IamJOS',
+    authorRole: 'Official Announcement',
     category: 'Pengumuman',
     readTime: '5 menit',
-    content: 'Asosiasi Pengelola Jurnal Indonesia (APJI) secara resmi memberikan dukungan penuh kepada IamJOS sebagai platform manajemen jurnal modern dan terpercaya. Dukungan ini menjadi bukti komitmen APJI dalam mendorong transformasi digital dalam ekosistem penerbitan jurnal akademik Indonesia. Kerjasama antara IamJOS dan APJI dirancang untuk memberikan manfaat maksimal bagi para pengelola jurnal di seluruh Indonesia.'
+    image: '/images/news-1.jpg',
+    content: 'Asosiasi Pengelola Jurnal Indonesia (APJI) secara resmi memberikan dukungan penuh kepada IamJOS sebagai platform manajemen jurnal modern dan terpercaya. Dukungan ini menjadi bukti komitmen APJI dalam mendorong transformasi digital dalam ekosistem penerbitan jurnal akademik Indonesia. Kerjasama antara IamJOS dan APJI dirancang untuk memberikan manfaat maksimal bagi para pengelola jurnal di seluruh Indonesia.\n\nDalam pernyataan resminya, APJI menyebutkan bahwa IamJOS memiliki fitur-fitur canggih yang memudahkan manajemen jurnal, dari proses submission hingga publikasi. Platform ini juga terintegrasi dengan database akademik internasional seperti Google Scholar, Scopus, dan Crossref.'
   },
   {
     id: 2,
     title: 'Integrasi Scopus Sempurna: Tingkatkan Visibilitas Jurnal Anda',
     date: '20 Mei 2026',
     author: 'Tim Teknis IamJOS',
+    authorRole: 'Technical Team',
     category: 'Fitur Baru',
     readTime: '7 menit',
-    content: 'IamJOS dengan bangga mengumumkan integrasi seamless dengan Scopus, salah satu database akademik terbesar dan paling terpercaya di dunia. Integrasi ini memungkinkan setiap artikel yang dipublikasikan di platform IamJOS untuk langsung terindeks dan dapat ditemukan oleh jutaan peneliti global. Dengan integrasi Scopus yang telah dioptimalkan, proses pengindeksan menjadi lebih cepat dan efisien.'
+    image: '/images/news-2.jpg',
+    content: 'IamJOS dengan bangga mengumumkan integrasi seamless dengan Scopus, salah satu database akademik terbesar dan paling terpercaya di dunia. Integrasi ini memungkinkan setiap artikel yang dipublikasikan di platform IamJOS untuk langsung terindeks dan dapat ditemukan oleh jutaan peneliti global. Dengan integrasi Scopus yang telah dioptimalkan, proses pengindeksan menjadi lebih cepat dan efisien.\n\nFitur baru ini memungkinkan pengelola jurnal untuk memantau indeksasi artikel secara real-time melalui dashboard IamJOS. Selain itu, kami juga menyediakan panduan lengkap tentang cara memastikan artikel Anda lolos proses review Scopus.'
   },
   {
     id: 3,
     title: 'Webinar Gratis: Optimalisasi Pengindeksan Journal di IamJOS',
     date: '15 Mei 2026',
     author: 'Event Team IamJOS',
+    authorRole: 'Events Coordinator',
     category: 'Event',
     readTime: '4 menit',
-    content: 'IamJOS mengundang Anda untuk menghadiri webinar gratis eksklusif tentang optimalisasi pengindeksan jurnal. Event ini dirancang khusus untuk para pengelola jurnal yang ingin meningkatkan visibilitas dan impact factor publikasi mereka. Topik pembahasan meliputi best practices dalam submission dan metadata optimization, strategi meningkatkan citation rate, dan cara memaksimalkan Google Scholar indexing.'
+    image: '/images/news-3.jpg',
+    content: 'IamJOS mengundang Anda untuk menghadiri webinar gratis eksklusif tentang optimalisasi pengindeksan jurnal. Event ini dirancang khusus untuk para pengelola jurnal yang ingin meningkatkan visibilitas dan impact factor publikasi mereka. Topik pembahasan meliputi best practices dalam submission dan metadata optimization, strategi meningkatkan citation rate, dan cara memaksimalkan Google Scholar indexing.\n\nWebinar akan dipandu oleh para expert yang berpengalaman di industri penerbitan akademik. Peserta akan mendapatkan sertifikat resmi dan akses eksklusif ke resources premium kami.'
   },
   {
     id: 4,
     title: 'Peningkatan Security: Sertifikasi SOC 2 Type II Diraih',
     date: '10 Mei 2026',
     author: 'Tim Security IamJOS',
+    authorRole: 'Security Team',
     category: 'Keamanan',
     readTime: '6 menit',
-    content: 'IamJOS dengan bangga mengumumkan bahwa kami telah meraih sertifikasi keamanan SOC 2 Type II. Pencapaian ini membuktikan komitmen kami terhadap keamanan data dan privasi pengguna dengan standar internasional tertinggi. SOC 2 (Service Organization Control) Type II adalah sertifikasi keamanan yang paling ketat, menunjukkan bahwa IamJOS telah melewati audit independen terhadap berbagai aspek keamanan.'
+    image: '/images/news-4.jpg',
+    content: 'IamJOS dengan bangga mengumumkan bahwa kami telah meraih sertifikasi keamanan SOC 2 Type II. Pencapaian ini membuktikan komitmen kami terhadap keamanan data dan privasi pengguna dengan standar internasional tertinggi. SOC 2 (Service Organization Control) Type II adalah sertifikasi keamanan yang paling ketat, menunjukkan bahwa IamJOS telah melewati audit independen terhadap berbagai aspek keamanan.\n\nSertifikasi ini mencakup penilaian menyeluruh atas sistem keamanan, availability, processing integrity, confidentiality, dan privacy kami. Dengan pencapaian ini, kami berkomitmen untuk terus meningkatkan standar keamanan platform demi perlindungan maksimal data penelitian Anda.'
   }
 ]
 
@@ -68,7 +77,7 @@ export default function NewsDetail({ params }: { params: { id: string } }) {
     <main className="min-h-screen bg-background pt-16">
       <Header />
       
-      <article className="py-20 px-4 sm:px-6 lg:px-8">
+      <article className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
           <Link
@@ -79,42 +88,56 @@ export default function NewsDetail({ params }: { params: { id: string } }) {
             Kembali ke Berita
           </Link>
 
-          {/* Hero Image */}
-          <div className="w-full h-96 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 mb-8" />
+          {/* Hero Image with Overlay */}
+          <div className="relative w-full h-96 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-primary/20 to-accent/20">
+            <Image
+              src={news.image}
+              alt={news.title}
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+          </div>
 
           {/* Article Header */}
-          <div className="space-y-4 mb-8">
+          <div className="space-y-6 mb-10">
             <div className="flex items-center gap-3 flex-wrap">
               <span className="text-sm font-semibold text-primary bg-primary/10 px-4 py-1 rounded-full">
                 {news.category}
               </span>
-              <span className="text-sm text-foreground/60 flex items-center gap-1">
+              <span className="text-sm text-foreground/60 flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 {news.date}
               </span>
-              <span className="text-sm text-foreground/60">{news.readTime}</span>
+              <span className="text-sm text-foreground/60 flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                {news.readTime}
+              </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-serif font-bold text-primary leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-serif font-bold text-primary leading-tight text-pretty">
               {news.title}
             </h1>
 
-            <div className="flex items-center gap-4 pt-4 border-t border-primary/20">
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+            <div className="flex items-center gap-4 pt-6 border-t border-primary/20">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg">
                 {news.author.charAt(0)}
               </div>
               <div>
                 <p className="font-semibold text-foreground">{news.author}</p>
-                <p className="text-sm text-foreground/60">{news.date}</p>
+                <p className="text-sm text-foreground/60">{news.authorRole}</p>
               </div>
             </div>
           </div>
 
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-foreground/80 leading-relaxed whitespace-pre-wrap">
-              {news.content}
-            </p>
+          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed prose prose-lg max-w-none">
+            {news.content.split('\n\n').map((paragraph, index) => (
+              <p key={index} className="text-foreground/80">
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           {/* Related News */}
