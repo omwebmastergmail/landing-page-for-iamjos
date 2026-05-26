@@ -52,7 +52,7 @@ export function FeaturesSection() {
         {/* Section Title - Above the grid */}
         <div className="mb-12 space-y-2">
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
-            Fitur Unggulan untuk Keunggulan
+            Fitur Unggulan untuk IamJOS
           </h2>
           <p className="text-lg text-foreground/60 max-w-2xl">
             Semua yang Anda butuhkan untuk mengelola jurnal akademik berkelas dunia
