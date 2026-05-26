@@ -49,47 +49,41 @@ export function FeaturesSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-primary/5">
       <div className="max-w-7xl mx-auto">
-        {/* Features Grid with Title Card in First Row */}
+        {/* Section Title - Above the grid */}
+        <div className="mb-12 space-y-2">
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-primary">
+            Fitur Unggulan untuk Keunggulan
+          </h2>
+          <p className="text-lg text-foreground/60 max-w-2xl">
+            Semua yang Anda butuhkan untuk mengelola jurnal akademik berkelas dunia
+          </p>
+        </div>
+
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Title Card - Aligned with icon position */}
-          <div className="group relative bg-white/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 hover:shadow-lg md:col-span-1 lg:col-span-1">
-            {/* Accent line */}
-            <div className="absolute top-0 left-0 w-1 h-12 bg-gradient-to-b from-accent to-transparent rounded-full group-hover:h-16 transition-all duration-300" />
-
-            {/* Title Content - Top aligned like icons in feature cards */}
-            <div className="space-y-4">
-              <h2 className="text-3xl font-serif font-bold text-primary leading-tight">
-                Fitur Unggulan untuk Keunggulan
-              </h2>
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Semua yang Anda butuhkan untuk mengelola jurnal akademik berkelas dunia
-              </p>
-            </div>
-          </div>
-
           {/* Feature Cards */}
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
               <div
                 key={index}
-                className="group relative bg-white/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 hover:shadow-lg flex flex-col"
+                className="group relative bg-white/50 backdrop-blur-sm border border-primary/10 rounded-2xl p-6 hover:border-accent/30 transition-all duration-300 hover:shadow-lg"
               >
                 {/* Accent line */}
                 <div className="absolute top-0 left-0 w-1 h-12 bg-gradient-to-b from-accent to-transparent rounded-full group-hover:h-16 transition-all duration-300" />
 
-                {/* Icon - Centered and at top */}
-                <div className="flex justify-center mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-accent/15 transition-colors">
+                {/* First Row: Icon + Title (Left aligned) */}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/15 transition-colors">
                     <Icon className="w-6 h-6 text-primary group-hover:text-accent transition-colors" />
                   </div>
+                  <h3 className="font-semibold text-foreground text-lg pt-1">
+                    {feature.title}
+                  </h3>
                 </div>
 
-                {/* Content */}
-                <h3 className="font-semibold text-foreground mb-2 text-center text-lg">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-foreground/60 leading-relaxed text-center">
+                {/* Second Row: Description (Left aligned) */}
+                <p className="text-sm text-foreground/60 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
