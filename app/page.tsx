@@ -5,6 +5,7 @@ import { ComplianceSection } from '@/components/compliance'
 import { ComparisonSection } from '@/components/comparison'
 import { PricingSection } from '@/components/pricing'
 import { FAQSection } from '@/components/faq'
+import { NewsSection } from '@/components/news'
 import { NewsletterSection } from '@/components/newsletter'
 import { Footer } from '@/components/footer'
 
@@ -32,6 +33,10 @@ export default function Home() {
       
       <section id="faq">
         <FAQSection />
+      </section>
+      
+      <section id="news">
+        <NewsSection />
       </section>
       
       <section id="newsletter">

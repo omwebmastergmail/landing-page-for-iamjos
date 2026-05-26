@@ -14,6 +14,8 @@ export function Header() {
     { label: 'Kepatuhan', href: '#compliance' },
     { label: 'Harga', href: '#pricing' },
     { label: 'FAQ', href: '#faq' },
+    { label: 'Berita', href: '#news' },
+    { label: 'Event', href: '#event' },
   ]
 
   useEffect(() => {
@@ -22,7 +24,7 @@ export function Header() {
       setHasScrolled(window.scrollY > 10)
 
       // Detect active section
-      const sections = ['features', 'compliance', 'pricing', 'faq']
+      const sections = ['features', 'compliance', 'pricing', 'faq', 'news', 'event']
       const currentSection = sections.find((section) => {
         const element = document.getElementById(section)
         if (element) {
